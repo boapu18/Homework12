@@ -1,5 +1,11 @@
+import sys
+import os
+
+# Añadir el directorio 'src' al PYTHONPATH
+sys.path.insert(0, os.path.abspath(os.path.join(os.path.dirname(__file__), '../src')))
+
 import pytest
-from src.calculadora import suma, resta, multiplicacion, division, exponenciacion, raiz_cuadrada
+from calculadora import suma, resta, multiplicacion, division, exponenciacion, raiz_cuadrada
 
 def test_suma():
     assert suma(2, 3) == 5
